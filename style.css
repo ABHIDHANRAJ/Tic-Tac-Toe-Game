@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: grey;
+    color: azure;
+    height: 35px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0 10px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+
+.gamecontainer {
+    display: flex;
+    justify-content: center;
+    /* background-color: rgb(204, 203, 203); */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 35px;
+    position: relative;
+}
+
+.box {
+    border: 1px solid black;
+    font-size: 7vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box :hover {
+    background-color: rgb(163, 128, 128);
+}
+
+.info {
+    font-size: 15px;
+}
+
+.gameinfo {
+    padding: 0 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.gameinfo h2 {
+    font-size: 1.5rem;
+}
+
+.imgbox img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 0 23px;
+    padding: 4px 25px;
+    background: rgb(241, 227, 241);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0vw;
+    position: absolute;
+    background-color: rgb(163, 128, 128);
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 850px) {
+    .gamecontainer {
+        flex-wrap: wrap;
+    }
+
+    .gameinfo {
+        margin-top: 35px;
+    }
+
+    .gameinfo h2 {
+        font-size: 1rem;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 18vw);
+    }
+}
